@@ -46,7 +46,7 @@ jobs:
       - name: Login to Azure Container Registry
         uses: azure/docker-login@v2
         with:
-          login-server: ${{ VARS.ACR_REGISTRY }}
+          login-server: ${{ secrets.ACR_REGISTRY }}
           username: ${{ secrets.ACR_CLIENT_ID }}
           password: ${{ secrets.ACR_CLIENT_PASSWORD }}
 
