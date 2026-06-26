@@ -58,5 +58,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ VARS.ACR_REGISTRY }}/${{ steps.set-variables.outputs.IMAGE }}:latest
-            ${{ VARS.ACR_REGISTRY }}/${{ steps.set-variables.outputs.IMAGE }}:${{ github.sha }}
+            ${{ secrets.ACR_REGISTRY }}/${{ steps.set-variables.outputs.IMAGE }}:latest
+            ${{ secrets.ACR_REGISTRY }}/${{ steps.set-variables.outputs.IMAGE }}:${{ github.sha }}
