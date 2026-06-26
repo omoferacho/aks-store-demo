@@ -42,5 +42,5 @@ jobs:
         run: |
          echo $KUBECONFIG
          cd charts/aks-store-demo       
-         helm upgrade --install aks-store-demo . --set acrName="${{ VARS.ACR_REGISTRY }}" --namespace default
+         helm upgrade --install aks-store-demo . --set acrName="${{ secrets.ACR_REGISTRY }}" --namespace default
          
